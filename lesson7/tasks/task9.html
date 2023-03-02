@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 9</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати кількість від’ємних
+		показів температури.
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+
+		// function getDefinitionNegativeValues(value) {
+		// 	if (value < 0) return 1
+		// 	else return 0
+		// }
+
+		// const quantityValues = parseInt(prompt('Введіть кількість значень температур'))
+		// let quantityNegativeValues = 0
+		// for (let i = 1; i <= quantityValues; i++) {
+		// 	const userValueTemp = parseFloat(prompt(`Введіть ${i} значення температури`))
+		// 	quantityNegativeValues += getDefinitionNegativeValues(userValueTemp)
+		// }
+
+		// document.write(`Серед ${quantityValues} показів температури було ${quantityNegativeValues} від’ємних.`)
+		//========================================================================================================================================================
+
+		// Альтернативний варіант
+
+		function isNegativeValues(value) {
+			if (value < 0) return 1
+			else return 0
+		}
+
+		function getDefinitionNegativeValues() {
+			let counterNegativeValues = 0
+			for (let i = 0; i < arguments.length; i++) {
+				counterNegativeValues += isNegativeValues(arguments[i])
+			}
+			return counterNegativeValues
+		}
+
+		const definitionNegativeValues = getDefinitionNegativeValues(-10, 25, 5, -5, -15, -10, 10, -2)
+		document.write(`Серед введених показів температури було ${definitionNegativeValues} від’ємних.`)
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

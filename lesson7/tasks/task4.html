@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 4</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість
+		додатних, кількість більших за 100.
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+
+		// 	let quantityEvenNumber = 0
+		// 	let quantityPositiveNumber = 0
+		// 	let quantityMoreNumber = 0
+
+		// function getMathExpressions(item) {
+		// 	if (item % 2 === 0) quantityEvenNumber += 1
+		// 	if (item > 0) quantityPositiveNumber += 1
+		// 	if (item > 100) quantityMoreNumber += 1
+		// 	return quantityEvenNumber, quantityPositiveNumber, quantityMoreNumber
+		// }
+
+		// function showMathExpressions(a, b, c) {
+		// 	getMathExpressions(b)
+		// 	getMathExpressions(c)
+		// 	getMathExpressions(a)
+
+		// 	return document.write(`Кількість парних чисел = ${quantityEvenNumber}<br>
+		// 	Кількість додатніх чисел = ${quantityPositiveNumber}<br>
+		// 	Кількість чисел більших за 100 = ${quantityMoreNumber}`)
+		// }
+
+		// // Користувач вводить чотири числа
+		// alert('Потрібно ввести три числа')
+		// const userNumber1 = parseFloat(prompt('Введіть значення першого числа'))
+		// const userNumber2 = parseFloat(prompt('Введіть значення другого числа'))
+		// const userNumber3 = parseFloat(prompt('Введіть значення третього числа'))
+		// showMathExpressions(userNumber1, userNumber2, userNumber3)
+
+		//=============== Альтернативний варіант  =========================================
+
+		function isEven(item) {
+			if (item % 2 === 0) return 1
+			else return 0
+		}
+
+		function isPositive(item) {
+			if (item > 0) return 1
+			else return 0
+		}
+
+		function isMore_100(item) {
+			if (item > 100) return 1
+			else return 0
+		}
+
+		function showMathExpressions(a, b, c) {
+			let quantityEvenNumber = isEven(a) + isEven(b) + isEven(c)
+			let quantityPositiveNumber = isPositive(a) + isPositive(b) + isPositive(c)
+			let quantityMoreNumber = isMore_100(a) + isMore_100(b) + isMore_100(c)
+
+			return document.write(`Кількість парних чисел = ${quantityEvenNumber}<br>
+			Кількість додатніх чисел = ${quantityPositiveNumber}<br>
+			Кількість чисел більших за 100 = ${quantityMoreNumber}`)
+		}
+
+		// Користувач вводить чотири числа
+		alert('Потрібно ввести три числа')
+		const userNumber1 = parseFloat(prompt('Введіть значення першого числа'))
+		const userNumber2 = parseFloat(prompt('Введіть значення другого числа'))
+		const userNumber3 = parseFloat(prompt('Введіть значення третього числа'))
+		showMathExpressions(userNumber1, userNumber2, userNumber3)
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

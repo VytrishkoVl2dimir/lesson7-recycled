@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 10</h2>
+	<h3>Умова задачі</h3>
+	<!-- Умова задачі -->
+	<p>
+		Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє значення для додатних
+		показів температури.
+	</p>
+	<h3>Розв'язок</h3>
+
+	<script>
+
+		// function getDefinitionPositiveValues(value) {
+		// 	if (value > 0) return value
+		// 	else return 0
+		// }
+
+		// function getCounterPositiveValues(value) {
+		// 	if (value > 0) return 1
+		// 	else return 0
+		// }
+
+		// function getAverageValue(quantity) {
+		// 	let summPositiveValues = 0
+		// 	let counterPositiveValues = 0
+		// 	for (let i = 1; i <= quantity; i++) {
+		// 		const userValueTempature = parseFloat(prompt(`Введіть ${i} значення температури`))
+		// 		summPositiveValues += getDefinitionPositiveValues(userValueTempature)
+		// 		counterPositiveValues += getCounterPositiveValues(userValueTempature)
+		// 	}
+
+		// 	const averageValue = summPositiveValues / counterPositiveValues
+		// 	return averageValue.toFixed(2)
+		// }
+
+		// const quantityValues = parseInt(prompt('Введіть кількість значень температур'))
+		// document.write(`Середнє значення для додатних показів температури складає ${getAverageValue(quantityValues)}.`)
+
+		//========================================================================================================================================================
+
+		// -------------------------Альтернативний варіант
+
+
+		function getDefinitionPositiveValues(value) {
+			if (value > 0) return value
+			else return 0
+		}
+
+		function isPositiveValues(value) {
+			if (value > 0) return 1
+			else return 0
+		}
+
+		function getAverageValue() {
+			let summPositiveValues = 0
+			let counterPositiveValues = 0
+			for (let i = 0; i < arguments.length; i++) {
+				summPositiveValues += getDefinitionPositiveValues(arguments[i])
+				counterPositiveValues += isPositiveValues(arguments[i])
+			}
+			const averageValue = summPositiveValues / counterPositiveValues
+			return averageValue.toFixed(2)
+		}
+
+		const averageValuePositiveValues = getAverageValue(-10, 12, 21, -5, -15, -10, 2, -2)
+		document.write(`Середнє значення для введених додатних показів температури складає ${averageValuePositiveValues}.`)
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

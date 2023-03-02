@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 13</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів
+		користувач намагається потопити корабель.
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+		// 1. Вводимо необхідні величини
+		const numberRows = 10 // Кількість рядків
+		const numberColumns = 10 // Кількість стовпців
+		const numberShells = 10 // Кількість снарядів
+		let restShells = numberShells // Залишок снарядів
+
+		// 1. Випадкови чином вибираємо позицію корабля
+		const randomNumberRows = 1 + Math.floor(Math.random() * numberRows)
+		const randomNumberColumns = 1 + Math.floor(Math.random() * numberColumns)
+
+		for (let i = 0; i < numberShells; i++) {
+			const userRows = parseInt(prompt(`На гральному полі ${numberRows} рядків. Введіть номер рядку.`))//Користувач задає номер рядку
+			const userColumns = parseInt(prompt(`На гральному полі ${numberColumns} колонок. Введіть номер колонки.`))//Користувач задає номер колонки
+			if (userRows === randomNumberRows && userColumns === randomNumberColumns) {
+				document.write('Вітаю, Вам вдалось, - корабель потоплений. <br>')
+				break
+			}
+			restShells--
+			if (restShells !== 0)
+				alert(`Не влучили, у Bас залишилось ${restShells} снарядів.`)
+			else alert(`Не влучили, у Bас не залишилось снарядів. Позиція корабля була: рядок ${randomNumberRows}, колонка ${randomNumberColumns}.`)
+		}
+		document.write('Гра завершена')
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

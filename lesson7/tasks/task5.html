@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 5</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Створити окремі функції, які переводять:
+		1) Сантиметри у дюйми;
+		2) Кілограми у фунти;
+		3) Кілометри у милі.
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+
+		//Функція, яка переводить сантиметри у дюйми
+		function getCentimetersInInches(value) {
+			const rezult = value * 0.39370
+			return rezult.toFixed(2)
+		}
+		//Функція, яка переводить кілограми у фунти
+		function kilogramsInPounds(value) {
+			const rezult = value * 2.2046
+			return rezult.toFixed(2)
+		}
+		//Функція, яка переводить кілометри у милі
+		function kilometersInMile(value) {
+			const rezult = value * 0.62137
+			return rezult.toFixed(2)
+		}
+
+		const userNumber = parseInt(prompt('Якщо вам потрібно перевести сантиметри у дюйми, натисніть 1. Якщо вам потрібно перевести кілограми у фунти, натисніть 2. Якщо вам потрібно перевести кілометри у милі, натисніть 3.'))
+		const userValue = parseFloat(prompt('Введіть значення'))
+		switch (userNumber) {
+			case 1: document.write(`${userValue} сантиметрів = ${getCentimetersInInches(userValue)} дюймів`)
+				break;
+			case 2: document.write(`${userValue} кілограм = ${kilogramsInPounds(userValue)} фунтів`)
+				break;
+			case 3: document.write(`${userValue} кілометрів = ${kilometersInMile(userValue)} миль`)
+				break;
+			default: document.write('Ви ввели некоректне значення')
+				break;
+		}
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

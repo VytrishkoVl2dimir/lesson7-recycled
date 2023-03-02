@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 4</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Вивести таблицю з 3 рядків і 7 стовпців
+	</p>
+	<img src="../img/image4.png" alt="image">
+
+	<h3>Розв'язок</h3>
+	<script>
+
+		const numberOfRows = 3 // Кількість рядків
+		const numberOfColumns = 7 // Кількість стовпців
+
+		document.write('<table border="2px">')
+		for (let i = 0; i < numberOfRows; i++) {
+			document.write('<tr>')
+			for (let j = 1; j <= numberOfColumns; j++) {
+				document.write(`<td>${j}</td>`)
+			}
+			document.write('</tr>')
+		}
+		document.write('</table>')
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

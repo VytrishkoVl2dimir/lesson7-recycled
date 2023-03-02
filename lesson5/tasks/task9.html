@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 9</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати confirm).
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+		let confirmNumber
+		const userNumber = parseInt(prompt('Введіть число, а я спробую його вгадати'))
+		do {
+			const randomNumber = Math.floor(Math.random() * (userNumber + 1))
+			confirmNumber = confirm(`Ви загадали число ${randomNumber}?`)
+			if (confirmNumber && userNumber === randomNumber) {
+				document.write(`Супер, я вгадав. Загадане число було ${userNumber}.<br>`)
+				break
+			}
+			else if (confirmNumber && userNumber !== randomNumber) {
+				document.write('Мені здається, що Ви не чесно граєте. <br>')
+				break
+			}
+			else if (!confirmNumber && userNumber === randomNumber) {
+				document.write('Мені здається, що Ви не чесно граєте. <br>')
+				break
+			}
+		} while (!confirmNumber)
+		document.write('Гра закінчена, спробуйте ще раз')
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

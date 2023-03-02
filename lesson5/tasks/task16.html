@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 16</h2>
+	<h3>Умова задачі</h3>
+	<!-- Умова задачі -->
+	<p>
+		Користувач поступово вводить прибуток магазину за кожен день протягом N тижнів. Знайти загальну величину
+		прибутку та вивести величину прибутку протягом кожного окремого тижня.
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+		// Задаємо величини
+		const quantityWeeks = 3 //кількість тижнів
+		const quantityWoksDay = 7 //Кількість робочих днів в тижні
+		let totalSum = 0 //Загальна сума прибутку
+		let currentSum = 0 //Поточна сума прибутку
+		let day //Змінні для визначення назви дня тижня
+
+		//Рішення
+		for (let currentWeeks = 1; currentWeeks <= quantityWeeks; currentWeeks++) {
+			for (let currentDay = 1; currentDay <= quantityWoksDay; currentDay++) {
+				switch (currentDay) {
+					case 1: day = 'Понеділок'
+						break;
+					case 2: day = 'Вівторок'
+						break;
+					case 3: day = 'Середу'
+						break;
+					case 4: day = 'Четвер'
+						break;
+					case 5: day = 'Пятницю'
+						break;
+					case 6: day = 'Суботу'
+						break;
+					case 7: day = 'Неділю'
+						break;
+				}
+				const sumFromDay = parseFloat(prompt(`Введіть прибуток за ${day}`))
+				currentSum += sumFromDay
+			}
+			alert(`Прибуток за ${currentWeeks} тиждень склав ${currentSum} грн.`)
+			document.write(`Прибуток за ${currentWeeks} тиждень склав ${currentSum} грн.<br>`)
+			totalSum += currentSum
+			currentSum = 0
+		}
+		document.write(`<h3>Загальний прибуток за ${quantityWeeks} тижні(в) склав ${totalSum} грн.</h3>`)
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

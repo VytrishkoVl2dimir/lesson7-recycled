@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 3</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Створити окремі функції, які для 4 чисел знаходять:
+		1)суму;
+		2)добуток;
+		3)середнє арифметичне;
+		4)мінімальне значення.
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+		// Тіло функції, яка визначає суму
+		function getSumm(a, b, c, d) {
+			const summ = a + b + c + d
+			return summ.toFixed(2)
+		}
+		// Тіло функції, яка визначає добуток
+		function getMultiplication(a, b, c, d) {
+			const multiplication = a * b * c * d
+			return multiplication.toFixed(2)
+		}
+		// Тіло функції, яка визначає середнє арифметичне
+		function getAverageValue(a, b, c, d) {
+			const averageValue = (a + b + c + d) / 4
+			return averageValue.toFixed(2)
+		}
+		// Тіло функції, яка визначає мінімальне значення
+		function getMinNumber(a, b, c, d) {
+			let minNumber = a
+			if (b < a) minNumber = b
+			if (c < minNumber) minNumber = c
+			if (d < minNumber) minNumber = d
+			return minNumber
+		}
+		// Користувач вводить чотири числа
+		const userNumber1 = parseFloat(prompt('Введіть значення першого числа'))
+		const userNumber2 = parseFloat(prompt('Введіть значення другого числа'))
+		const userNumber3 = parseFloat(prompt('Введіть значення третього числа'))
+		const userNumber4 = parseFloat(prompt('Введіть значення четвертого числа'))
+
+		document.write(`Сума чотирьох чисел = ${getSumm(userNumber1, userNumber2, userNumber3, userNumber4)}<br>`)
+		document.write(`Добуток чотирьох чисел = ${getMultiplication(userNumber1, userNumber2, userNumber3, userNumber4)}<br>`)
+		document.write(`Середнє арифметичне чотирьох чисел = ${getAverageValue(userNumber1, userNumber2, userNumber3, userNumber4)}<br>`)
+		document.write(`Мінімальне значення чотирьох чисел = ${getMinNumber(userNumber1, userNumber2, userNumber3, userNumber4)}`)
+
+	</script>
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

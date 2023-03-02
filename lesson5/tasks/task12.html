@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 12</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з
+		чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн,
+		три других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для
+		вибору зображення за номером).
+	</p>
+	<img src="../img/image12.png" alt="image">
+	<h3>Розв'язок</h3>
+
+	<script>
+		// Оголошення змінних та констант
+		const numberOfColumns = 3
+		const minNumber = 1
+		const maxNumber = 4
+		let cunter1 = 0
+		let cunter2 = 0
+		let cunter3 = 0
+		let cunter4 = 0
+		let winning = 0
+
+		// Визначення випадкових 3 зображень (цифр від 1 до 4)
+		for (let i = 0; i < numberOfColumns; i++) {
+			const randomNumber = minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1))
+			document.write(`<img src = "../img/task12/${randomNumber}.png" alt = "">`)
+			switch (randomNumber) {
+				case 1: cunter1++
+					break
+				case 2: cunter2++
+					break
+				case 3: cunter3++
+					break
+				case 4: cunter4++
+					break
+			}
+		}
+
+		// Перевірка розміру виграшу
+		if (cunter1 === 3) winning = 100
+		else if (cunter2 === 3) winning = 200
+		else if (cunter3 === 3) winning = 500
+		else if (cunter4 === 3) winning = 1000
+
+		document.write(`<br> <h3>Гру завершено. Ваш виграш складає ${winning} грн.</h3>`)
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

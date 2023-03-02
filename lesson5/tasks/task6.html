@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 6</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком
+	</p>
+	<img src="../img/image6.png" alt="image">
+
+	<h3>Розв'язок</h3>
+	<script>
+		const numberOfRows = 3 // Кількість рядків
+		const numberOfColumns = 3 // Кількість стовпців
+		const numberOfTables = 3 // Кількість таблиць
+		let counter = 1
+
+		for (let i = 0; i < numberOfTables; i++) {
+			document.write('<table border="2px" class="table_vision">')
+			for (let j = 0; j < numberOfRows; j++) {
+				document.write('<tr>')
+				for (let k = 0; k < numberOfColumns; k++) {
+					document.write(`<td>${counter}</td>`)
+					counter++
+				}
+				document.write('</tr>')
+			}
+			document.write('</table>')
+		}
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+
+		.table_vision {
+			display: inline-block;
+			margin: 0px 30px 0px 20px;
+		}
+	</style>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 8</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Користувач загадує число. За 3 спроби комп’ютер намагається вгадати число користувача (використати confirm).
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+		const numberAttempts = 3 //кількість спроб
+		const userNumber = parseInt(prompt('Введіть число, а я спробую за три спроби вгадати'))
+		for (let i = 1; i <= numberAttempts; i++) {
+			const randomNumber = Math.floor(Math.random() * (userNumber + 1))
+			const confirmNumber = confirm(`Ви загадали число ${randomNumber}?`)
+			if (confirmNumber && userNumber === randomNumber) {
+				document.write(`Супер, я вгадав. Загадане число було ${userNumber}.<br>`)
+				break
+			}
+			else if (confirmNumber && userNumber !== randomNumber) {
+				document.write('Мені здається, що Ви не чесно граєте. <br>')
+				break
+			}
+			else if (!confirmNumber && userNumber === randomNumber) {
+				document.write('Мені здається, що Ви не чесно граєте. <br>')
+				break
+			}
+			if (confirmNumber === false && i === numberAttempts) document.write('Нажаль цього разу не вийшло. <br>')
+		}
+		document.write('Гра закінчена, спробуйте ще раз')
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

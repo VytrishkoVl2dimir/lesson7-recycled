@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 7</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень передаються у
+		функцію).
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+
+		// // Оголошення змінних та констант
+		// const minNumber = 1
+		// const maxNumber = 4
+
+		// // Визначення номеру випадкового зображення (цифра від 1 до 4)
+		// const randomNumber = minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1))
+
+		// // тіло функції, яка виводить малюнок
+		// function showImage(index) {
+		// 	document.write(`<img src = "../img/${index}.png" alt = "">`)
+		// }
+		// showImage(randomNumber)// Виклик функції
+
+		//========================================================================================================================================================
+		// Альтернативний варіант 
+
+		// тіло функції, яка виводить малюнок
+		function showImage(link) {
+			document.write(`<img src = "${link}" alt = "image">`)
+		}
+
+		// Визначення номеру випадкового зображення (цифра від 1 до 4)
+		const randomNumber = 1 + Math.floor(Math.random() * 4)
+
+		showImage(`../img/${randomNumber}.png`) // Виклик функції з передачею шляху
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

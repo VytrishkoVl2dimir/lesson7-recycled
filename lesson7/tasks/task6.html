@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 6</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим
+		фіксованим повідомленням).
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+
+		function showTable(rows, columns) {
+			document.write('<table border="2px">')
+			for (let i = 0; i < rows; i++) {
+				document.write('<tr>')
+				for (let j = 0; j < columns; j++) {
+					document.write(`<td>Hello</td>`)
+				}
+				document.write('</tr>')
+			}
+			document.write('</table>')
+		}
+
+		const numberOfRows = parseInt(prompt('Введіть кулькість рядків')) // Введення користувачем кількості рядків
+		const numberOfColumns = parseInt(prompt('Введіть кулькість стовпців')) // Введення користувачем кількості стовпців
+		showTable(numberOfRows, numberOfColumns)
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+
+		.table_vision {
+			display: inline-block;
+			margin: 0px 30px 0px 20px;
+		}
+	</style>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 11</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Знайти суму 5 непарних чисел, що знаходяться між заданими користувачем числами.
+	</p>
+	<h3>Розв'язок</h3>
+
+	<script>
+
+		const quantityLoops = 5
+		alert('Потрібно найти суму 5 непарних чисел, що знаходяться в введеному Вами діпазоні.')
+		const userFirstNumber = parseInt(prompt('Введіть початкове значення діапазону'))
+		const userSecondNumber = parseInt(prompt('Введіть кінцеве значення діапазону'))
+		let counterNumbers = userFirstNumber + 1
+		let sum = 0
+		let counterLoops = 0
+
+		while (counterNumbers < userSecondNumber && counterLoops < quantityLoops) {
+			if (counterNumbers % 2 !== 0) {
+				sum += counterNumbers
+				counterLoops++
+			}
+			counterNumbers++
+		}
+		document.write(`Сума ${counterLoops} непарних чисел складає = ${sum}`)
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

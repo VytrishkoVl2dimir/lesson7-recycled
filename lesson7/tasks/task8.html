@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 8</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Створити функцію, яка виводить банер, у функцію передаються: зображення, заголовок та посилання, куди переходимо
+		при кліку на зображення (тег img повинен знаходитись у середині тега a:)
+	</p>
+
+	<h3>Розв'язок</h3>
+
+	<script>
+
+		function showBanner(numImg, title, goto) {
+			document.write(`
+			<h4>${title}</h4>
+			<a href="${goto}">
+				<img class="link" src = "../img/${numImg}.png" alt = "image">
+			</a>			
+			`)
+		}
+
+		const numberOfImage = parseInt(prompt('Введіть номер зображення (цифрою від 1 до 4)'))
+		const userTitle = prompt('Введіть заголовок банера', 'Заголовок')
+
+		const link = 'https://www.youtube.com'
+
+		showBanner(numberOfImage, userTitle, link)
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+
+		h4 {
+			color: #19058a;
+			font-size: 50px;
+			text-decoration: underline;
+		}
+
+		.link:hover {
+			transition: transform 0.8s ease 0s;
+			transform: translate(2px, -2px);
+		}
+	</style>
+</body>
+
+</html>

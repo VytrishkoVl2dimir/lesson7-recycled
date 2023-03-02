@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 1</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Створити функцію, яка за номером місяця повертає його назву.
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+		// Тіло функції, яка визначає назву місяця
+		function getSeason(indexMonth) {
+			let rezult
+			switch (indexMonth) {
+				case 1: rezult = 'Січень'
+					break
+				case 2: rezult = 'Лютий'
+					break
+				case 3: rezult = 'Березень'
+					break
+				case 4: rezult = 'Квітень'
+					break
+				case 5: rezult = 'Травень'
+					break
+				case 6: rezult = 'Червень'
+					break
+				case 7: rezult = 'Липень'
+					break
+				case 8: rezult = 'Серпень'
+					break
+				case 9: rezult = 'Вересень'
+					break
+				case 10: rezult = 'Жовтень'
+					break
+				case 11: rezult = 'Листопад'
+					break
+				case 12: rezult = 'Грудень'
+					break
+				default: rezult = 'Помилка'
+					break
+			}
+			return rezult
+		}
+		// Користувач вводить номер місяця
+		const monthNumber = parseInt(prompt('Введіть номер місяця (1-12)', ''))
+		document.write(`Місяць - ${getSeason(monthNumber)}`)
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+
+		ul {
+			margin: 0;
+		}
+	</style>
+</body>
+
+</html>

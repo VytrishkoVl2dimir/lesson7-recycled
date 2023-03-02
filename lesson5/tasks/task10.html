@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 10</h2>
+	<h3>Умова задачі</h3>
+	<!-- Умова задачі -->
+	<p>
+		Знайти суму всіх непарних чисел, що знаходяться між заданими користувачем числами.
+	</p>
+	<h3>Розв'язок</h3>
+
+	<script>
+		alert('Потрібно найти суму всіх непарних чисел, що знаходяться в введеному Вами діпазоні.')
+		const userFirstNumber = parseInt(prompt('Введіть початкове значення діапазону'))
+		const userSecondNumber = parseInt(prompt('Введіть кінцеве значення діапазону'))
+		let counterNumber = userFirstNumber + 1
+		let sum = 0
+		while (counterNumber < userSecondNumber) {
+			if (counterNumber % 2 !== 0)
+				sum += counterNumber
+			counterNumber++
+		}
+		document.write(`Сума непарних чисел складає = ${sum}`)
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>

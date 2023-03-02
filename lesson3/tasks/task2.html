@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h1>Задача 2</h1>
+
+	<!-- Умова задачі -->
+	<p>
+		З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше,
+		якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+	</p>
+
+	<!-- Розвязок -->
+	<script>
+		// 1. Вводимо необхідні дані
+		const quantityMoney = parseFloat(prompt(`Вкажіть кількість наявних грошей`, '0'))
+		const priceGoods = parseFloat(prompt(`Вкажіть ціну товару`, '0'))
+
+		const quantityGoods = Math.floor(quantityMoney / priceGoods) // 2. Визначаємо скільки товару можна купити
+
+		if (quantityGoods >= 1) {
+			document.write(`Ви можете придбати ${quantityGoods} одиниць товару. <br>`)
+			const restMoney = Math.floor(quantityMoney % priceGoods) //3. Розраховуємо решту
+			if (restMoney >= 4) // 4. Перевіряємо, чи вистачає коштів на лотерейний квиток
+				document.write(`Пропонуємо Вам придбати лотерею за 4 грн. <br>`)
+		}
+		else
+			document.write(`Нажаль, Ви не можете придбати цей товар`)
+	</script>
+</body>
+
+</html>
